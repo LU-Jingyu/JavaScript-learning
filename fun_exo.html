@@ -1,0 +1,43 @@
+<!DOCTYPE  HTML>
+<html >
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>函数</title>
+
+<script type="text/javascript">
+// 使用javascript代码写出一个函数：实现传入两个整数后弹出较大的整数。
+//定义函数
+function max(x, y) {
+    if (x < y) {
+        return y;
+    } else if (x>y) {
+        return x;
+    }else{
+        return "一样大";
+    }
+        
+    
+}
+
+
+
+//函数体，判断两个整数比较的三种情况
+    max_01 = max(5,4);
+    max_02 = max(6,3);
+    max_03 = max(1,1);
+
+ 
+//调用函数，实现下面两组数中，返回较大值。
+  document.write(" 5 和 4 的较大值是: " +max_01+"<br>");
+  document.write(" 6 和 3 的较大值是:" +max_03+"<br/>");
+
+
+
+
+
+</script>
+</head>
+<body>
+    <!-- <div>5和4的较大值是：</div> -->
+</body>
+</html>

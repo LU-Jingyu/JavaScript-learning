@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>浏览器对象</title>
+  <meta charset="UTF-8" http-equiv="Content-Type" content="text/html" />
+</head>
+
+<body>
+  <!--先编写好网页布局-->
+  <div class="main-content">
+    <h1>操作成功！</h1>
+    <p><span id="time"></span>秒后返回主页
+      <span class="return_btn" id="back" onclick="goback()"><a href="#">返回</a></span>
+    </p>
+  </div>
+
+
+  <script type="text/javascript">
+    var num = 5;
+    function count() {
+
+      document.getElementById('time').innerHTML = num;
+      num = num - 1;
+      if (num < 0) {
+        window.location.href = "https://www.imooc.com";
+      }
+
+      i = setTimeout("count()", 1000);
+    }
+    setTimeout(count(), 100);
+    //获取显示秒数的元素，通过定时器来更改秒数。
+    // setTimeout(()=>{
+    //   var a = document.createElement("a");
+    //   a.setAttribute("href", "https://www.imooc.com");
+    //   a.click();
+    // }, 3000);
+    //通过window的location和history对象来控制网页的跳转。
+    function goback() {
+      window.history.back();
+    }
+
+  </script>
+</body>
+
+</html>
